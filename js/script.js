@@ -67,7 +67,12 @@ function show(element) {
 }
 
 function confirm() {
-  hide(allInputs);
+  event.preventDefault();
+  hide(header6);
+  for (let i=0; i<allInputs.length; i++){
+    allInputs[i].style.display = "none";
+  }
+  hide(projectTypes);
   hide(submitButton);
   show(header7);
 }
@@ -76,7 +81,6 @@ for (let i=0; i<allInputs.length; i++){
   allInputs[i].style.display = "none";
 }
 hide(projectTypes);
-hide(textbox);
 header1.innerHTML = "What's up? We're Umbrella Avenue. <br> What's your name, good lookin'?"
 show(header1);
 show(nameInput);
