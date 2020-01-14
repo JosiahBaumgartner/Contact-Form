@@ -1,0 +1,175 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+body {
+  font: 1em/1.5;
+  color: #fff;
+	background: #ffbf4c;
+  font-family: "K2D";
+  text-align: center;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-shadow: 0 1px 0 rgba(22, 59, 51, 0.85);
+	margin: 2em;
+  color: #fff;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =================================
+  Form Element Styles
+==================================== */
+
+#header2,
+#header3,
+#header4 {
+  display: none;
+}
+
+fieldset {
+  display: inline-block;
+  width: 40%;
+  border: none;
+  font-size: 1.5em;
+}
+
+form {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  margin: 2em;
+  font-family: "K2D";
+	font-size: 1.5em;
+	font-weight: 500;
+	padding: .8em;
+	background: rgba(0,0,0,0);
+	border-bottom: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 40%;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 5px
+}
+
+label {
+  text-align: left;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label:hover input ~ .checkmark {
+  background-color: #fff9;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffbf4c;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Override chrome autofill bg color hack found at https://webagility.com/posts/the-ultimate-list-of-hacks-for-chromes-forced-yellow-background-on-autocompleted-inputs */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0) inset;
+}
+
+button {
+  font-size: 1.25em;
+  font-family: "K2D";
+	color: #ffbf4c;
+	padding: .55em 1.25em;
+	background: #fff;
+	margin: 1.25em 0 .5em;
+	cursor: pointer;
+  border: 0;
+	border-radius: 999px;
+	transition: all 0.5s;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+  border-bottom: 2px solid #fff;
+}
+
+input:focus::placeholder {
+  color: #fff9;
+}
+/* =================================
+  Helper Classes
+==================================== */
+
+.is-hidden {
+	display: none;
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.validation-error-input {
+  border-color: #f13c20;
+  background-color: #801808;
+  transition: border-color .4s, background-color .4s;
+}
+
+.validation-error-message {
+  color: #f13c20;
+  font-weight: bold;
+}
