@@ -2,12 +2,14 @@ const header1 = document.querySelector("#header1");
 const header2 = document.querySelector("#header2");
 const header3 = document.querySelector("#header3");
 const header4 = document.querySelector("#header4");
+const header5 = document.querySelector("#header5");
 const allInputs = document.querySelectorAll("input");
 const nameInput = document.querySelector("#name");
 const phoneNumberInput = document.querySelector("#phoneNumber");
 const emailAddressInput = document.querySelector("#emailAddress");
 const button = document.querySelector("#nextButton");
 const projectTypes = document.querySelector("#projectTypes");
+const 
 let step = 0;
 let name = "";
 
@@ -33,7 +35,11 @@ function nextStep() {
       hide(emailAddressInput);
       show(header4);
       show(projectTypes);
-
+    } else if (step === 4) {
+      hide(header4);
+      hide(projectTypes);
+      show(header5);
+      show(textbox);
     }
 }
 

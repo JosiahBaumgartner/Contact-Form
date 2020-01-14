@@ -33,6 +33,7 @@ a {
 }
 
 fieldset {
+  margin: 2em;
   display: inline-block;
   width: 40%;
   border: none;
