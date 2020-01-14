@@ -9,7 +9,6 @@ const phoneNumberInput = document.querySelector("#phoneNumber");
 const emailAddressInput = document.querySelector("#emailAddress");
 const button = document.querySelector("#nextButton");
 const projectTypes = document.querySelector("#projectTypes");
-const 
 let step = 0;
 let name = "";
 
